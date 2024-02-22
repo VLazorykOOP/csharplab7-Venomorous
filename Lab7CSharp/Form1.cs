@@ -12,11 +12,17 @@ namespace Lab7CSharp
 {
     public partial class Form1 : Form
     {
+        private Form2 form2;
+        private Form3 form3;
+
         public Form1()
         {
             InitializeComponent();
             form2 = new Form2();
+            form3 = new Form3();
+
             form2.Owner = this;
+            form3.Owner = this;
         }
 
         private void Form1_Load(object sender, EventArgs e) { }

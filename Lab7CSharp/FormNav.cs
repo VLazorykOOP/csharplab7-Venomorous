@@ -9,12 +9,16 @@ namespace Lab7CSharp
 {
     public partial class Form1 : Form
     {
-        private Form2 form2;
-
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
             form2.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form3.Show();
         }
     }
 
@@ -23,6 +27,17 @@ namespace Lab7CSharp
         private Form1 form1;
 
         private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form1.Show();
+        }
+    }
+
+    public partial class Form3 : Form
+    {
+        private Form1 form1;
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             form1.Show();

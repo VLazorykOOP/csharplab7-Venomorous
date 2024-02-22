@@ -69,7 +69,7 @@ namespace Lab7CSharp
             // Attach event handlers
             openFileDialog.FileOk += OpenFileDialog_FileOk;
 
-            this.FormClosing += Form2_FormClosing;
+            this.FormClosing += Form_FormClosing;
         }
 
         protected override void OnLoad(EventArgs e)
@@ -80,17 +80,9 @@ namespace Lab7CSharp
             {
                 form1 = (Form1)this.Owner;
             }
-            else
-            {
-                // Handle the case where Owner is not Form1, if needed.
-                // For example, show an error message or take appropriate action.
-            }
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            // No need to show OpenFileDialog here
-        }
+        private void Form2_Load(object sender, EventArgs e) { }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -165,7 +157,7 @@ namespace Lab7CSharp
             pictureBox1.Image = original;
         }
 
-        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
