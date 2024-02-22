@@ -15,11 +15,43 @@ namespace Lab7CSharp
         public Form1()
         {
             InitializeComponent();
+            form2 = new Form2();
+            form2.Owner = this;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) { }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Get the current time and extract seconds
+            int seconds = DateTime.Now.Second;
+
+            // Display seconds in decimal
+            label1.Text = $"Decimal: {seconds}";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Get the current time and extract seconds
+            int seconds = DateTime.Now.Second;
+
+            // Convert seconds to binary
+            string binarySeconds = Convert.ToString(seconds, 2);
+
+            // Display seconds in binary
+            label1.Text = $"Binary: {binarySeconds}";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Get the current time and extract seconds
+            int seconds = DateTime.Now.Second;
+
+            // Convert seconds to hexadecimal
+            string hexSeconds = seconds.ToString("X");
+
+            // Display seconds in hexadecimal
+            label1.Text = $"Hexadecimal: {hexSeconds}";
         }
     }
 }
